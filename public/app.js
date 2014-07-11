@@ -1,6 +1,20 @@
 angular.module('controllerAsExample', [])
-  .controller('HelloController', HelloController);
+  .controller('MainController', MainController);
 
-function HelloController($scope) {
- $scope.letter = 'o';
+function MainController($scope, $timeout) {
+	$scope.letter = 'o';
+
+	//the current string displayed onscreen
+	$scope.currString = $scope.letter;
+
+
+	$scope.onTimeout = function(){
+		//add extra letter
+    	$scope.currString+= $scope.letter;
+    	mytimeout = $timeout($scope.onTimeout,5000);
+    }
+    
+    //call timeout function
+    var mytimeout = $timeout($scope.onTimeout,5000);
+
 }
