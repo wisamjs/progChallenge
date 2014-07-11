@@ -6,9 +6,16 @@
 	height:25px;
 	top: 50%;
 	left:0%;
+
+	/* animation prefixes for all browsers */
 	-webkit-animation:bounce 1s linear infinite;
+   -moz-animation:bounce 1s linear infinite;
+    -ms-animation:bounce 1s linear infinite;
+     -o-animation:bounce 1s linear infinite;
+        animation:bounce 1s linear infinite;
 }
 
+/*animation defining position */
 @-webkit-keyframes bounce {
 	0% {
 		top: 50%;
@@ -32,7 +39,8 @@
 	}
 
 	100% {
-	
+		top: 50%;
+		left:0%;
 	}
 
 }
