@@ -1,0 +1,40 @@
+
+
+.animate{
+	position: absolute;
+	width:25px;
+	height:25px;
+	top: 50%;
+	left:0%;
+	-webkit-animation:bounce 1s linear infinite;
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		top: 50%;
+		left:0%;
+	}
+
+	25% {
+		top: 0%;
+		left: 50%;
+	}
+
+	50% {
+		top: 50%;
+		left:100%;
+	}
+
+	75% {
+		top: 100%;
+		left: 50%;
+
+	}
+
+	100% {
+	
+	}
+
+}
+
+
