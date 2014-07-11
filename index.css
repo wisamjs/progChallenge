@@ -8,39 +8,43 @@
 	left:0%;
 
 	/* animation prefixes for all browsers */
-	-webkit-animation:bounce 1s linear infinite;
-   -moz-animation:bounce 1s linear infinite;
-    -ms-animation:bounce 1s linear infinite;
-     -o-animation:bounce 1s linear infinite;
-        animation:bounce 1s linear infinite;
+	-webkit-animation:bounce 5s linear infinite;
+   -moz-animation:bounce 5s linear infinite;
+    -ms-animation:bounce 5s linear infinite;
+     -o-animation:bounce 5s linear infinite;
+        animation:bounce 5s linear infinite;
 }
 
 /*animation defining position */
 @-webkit-keyframes bounce {
+
+	/*mid-left*/
 	0% {
 		top: 50%;
 		left:0%;
 	}
-
+	/*top-center*/
 	25% {
 		top: 0%;
 		left: 50%;
 	}
 
+	/*mid-right*/
 	50% {
 		top: 50%;
 		left:100%;
 	}
 
+	/*bottom-center*/
 	75% {
 		top: 100%;
 		left: 50%;
 
 	}
-
+	/*middle-page*/
 	100% {
 		top: 50%;
-		left:0%;
+		left:50%;
 	}
 
 }
