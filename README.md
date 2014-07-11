@@ -19,4 +19,8 @@ After completing the above, if you'd like to go above beyond:
 	c- Instead of the 5 spots specified in the problem (left-middle, top-middle, etc...), move the O
 	   between the 12 spots on an analog clock
 
+##Live Demo
+
+###Main Challenge
+Click [here](http://wzaghal.github.io/progChallenge/)
 
