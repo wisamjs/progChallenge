@@ -1,0 +1,24 @@
+{
+  "name": "progChallenge",
+  "version": "0.0.0",
+  "description": "##Instructions Create a page on which letter O moves from left-middle to top-middle to right-middle to bottom-middle and center every second in a cycle.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wzaghal/progChallenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wzaghal/progChallenge/issues"
+  },
+  "homepage": "https://github.com/wzaghal/progChallenge",
+  "devDependencies": {
+    "gulp-plumber": "^0.6.3",
+    "gulp-sass": "^0.7.2",
+    "gulp": "^3.8.6",
+  }
+}

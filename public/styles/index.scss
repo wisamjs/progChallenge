@@ -1,0 +1,201 @@
+$animations : ((0,50%,0%),
+			   (1,0%,50%),
+			   (2,50%,100%),
+			   (3,100%,50%),
+			   (4,50%,50%));
+
+
+
+
+/*
+Below are the 4 different animation
+classes that use different keyframes
+depending on the positions
+*/
+
+@each $animation in $animations{
+	.animatePos#{nth($animation,1)}{
+		position: absolute;
+
+		/* animation prefixes for all browsers */
+		-webkit-animation:pos#{nth($animation,1)} 4s linear infinite;
+	   -moz-animation:pos#{nth($animation,1)} 4s linear infinite;
+	    -ms-animation:pos#{nth($animation,1)} 4s linear infinite;
+	     -o-animation:pos#{nth($animation,1)} 4s linear infinite;
+	        animation:pos#{nth($animation,1)} 4s linear infinite;
+	}
+
+}
+
+
+
+/*animation defining position */
+@-webkit-keyframes pos0 {
+
+	/*mid-left*/
+	0% {
+		top: 50%;
+		left:0%;
+	}
+	/*top-center*/
+	25% {
+		top: 0%;
+		left: 50%;
+	}
+
+	/*mid-right*/
+	50% {
+		top: 50%;
+		left:100%;
+	}
+
+	/*bottom-center*/
+	75% {
+		top: 100%;
+		left: 50%;
+
+	}
+	/*middle-page*/
+	100% {
+		top: 50%;
+		left:50%;
+	}
+
+}
+
+/*animation defining position */
+@-webkit-keyframes pos1 {
+
+
+	/*top-center*/
+	0% {
+		top: 0%;
+		left: 50%;
+	}
+
+	/*mid-right*/
+	25% {
+		top: 50%;
+		left:100%;
+	}
+
+	/*bottom-center*/
+	50% {
+		top: 100%;
+		left: 50%;
+
+	}
+	/*middle-page*/
+	75% {
+		top: 50%;
+		left:50%;
+	}
+		/*mid-left*/
+	100% {
+		top: 50%;
+		left:0%;
+	}
+
+}
+
+/*animation defining position */
+@-webkit-keyframes pos2 {
+
+
+	/*mid-right*/
+	0% {
+		top: 50%;
+		left:100%;
+	}
+
+	/*bottom-center*/
+	25% {
+		top: 100%;
+		left: 50%;
+
+	}
+	/*middle-page*/
+	50% {
+		top: 50%;
+		left:50%;
+	}
+
+		/*mid-left*/
+	75% {
+		top: 50%;
+		left:0%;
+	}
+	/*top-center*/
+	100% {
+		top: 0%;
+		left: 50%;
+	}
+
+}
+/*animation defining position */
+@-webkit-keyframes pos3 {
+
+
+	/*bottom-center*/
+	0% {
+		top: 100%;
+		left: 50%;
+
+	}
+	/*middle-page*/
+	25% {
+		top: 50%;
+		left:50%;
+	}
+
+		/*mid-left*/
+	50% {
+		top: 50%;
+		left:0%;
+	}
+	/*top-center*/
+	75% {
+		top: 0%;
+		left: 50%;
+	}
+		/*mid-right*/
+	100% {
+		top: 50%;
+		left:100%;
+	}
+
+}
+
+/*animation defining position */
+@-webkit-keyframes pos4 {
+
+	/*middle-page*/
+	0% {
+		top: 50%;
+		left:50%;
+	}
+	/*mid-left*/
+	25% {
+		top: 50%;
+		left:0%;
+	}
+	/*top-center*/
+	50% {
+		top: 0%;
+		left: 50%;
+	}
+
+	/*mid-right*/
+	75% {
+		top: 50%;
+		left:100%;
+	}
+
+	/*bottom-center*/
+	100% {
+		top: 100%;
+		left: 50%;
+
+	}
+
+}
