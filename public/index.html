@@ -7,17 +7,19 @@
 </head>
 
 <body>
-
-	<!-- Using Maincontroller I am able to access variable letter -->
-	<div class="animatePos12" ng-controller="MainController">
-	 <!--ng-class="'animatePos{{ position }}'"> -->
-		<p>{{currString}}</p>
+	<!-- MainController allows us to access $scope variables definied in MainCtrl.js -->
+	<div class="animatePos1" ng-controller="MainController" ng-class="'animatePos{{ position }}'">
+		<p>{{ currString }}</p>
 	</div>
 
 	<!-- vendors -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 	<script src="vendors/angular-local-storage.js"></script>
+
+	<!-- Modules -->
 	<script src="app.js"></script>
+
+	<!-- Controllers -->
 	<script src="controllers/MainCtrl.js"></script>
 
 </body>

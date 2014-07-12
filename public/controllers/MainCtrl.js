@@ -27,10 +27,10 @@ myApp.controller('MainController',
     	$timeout($scope.addLetter,4000);
     }
 
-
+    //update position of letter
     $scope.updatePosition = function(){
 
-    	if ($scope.position === 4){
+    	if ($scope.position === 12){
 
     		$scope.position = 0;
     	}else{
@@ -40,11 +40,11 @@ myApp.controller('MainController',
     		//update value to local storage
     		localStorageService.set('position',$scope.position);
 
-		$timeout($scope.updatePosition,1000);
+		$timeout($scope.updatePosition,300);
 	}
 
 
-    //call timeout function
+    //call timeout functions
     var addLetter = $timeout($scope.addLetter,5000);
-    var updatePosition = $timeout($scope.updatePosition,1000);
+    var updatePosition = $timeout($scope.updatePosition,300);
 }]);

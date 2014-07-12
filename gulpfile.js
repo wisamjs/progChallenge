@@ -1,9 +1,8 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
-var livereload = require('gulp-livereload');
-var connect = require('gulp-connect');
+var gulp = require('gulp'),
+	sass = require('gulp-sass'),
+	plumber = require('gulp-plumber');
 
+//task to compile scss file.
 gulp.task('sass', function() {
   gulp.src('public/styles/index.scss')
     .pipe(plumber())
@@ -11,7 +10,8 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('public/styles'));
 });
 
-
+//task to watch for new scss changes
+//and update css
 gulp.task('watch', function() {
   	gulp.watch('public/styles/*.scss', ['sass']);
 });
