@@ -1,41 +1,39 @@
-$animations : ((0,0%,50%,0%),
-			   (1,25%,0%,50%),
-			   (2,50%,50%,100%),
-			   (3,75%,100%,50%),
-			   (4,100%,50%,50%));
-$temp:16.666666667;
-$temp2: 8.333333333%;
-$keyframes: (0%,$temp2,2*$temp2,3*$temp2,4*$temp2,5*$temp2,6*$temp2,7*$temp2,8*$temp2,9*$temp2,10*$temp2,11*$temp2,12*$temp2);
+$clockFraction: 8.333333333%;
+$keyframes: (0%,$clockFraction,
+			 2*$clockFraction,
+			 3*$clockFraction,
+			 4*$clockFraction,
+			 5*$clockFraction,
+			 6*$clockFraction,
+			 7*$clockFraction,
+			 8*$clockFraction,
+			 9*$clockFraction,
+			 10*$clockFraction,
+			 11*$clockFraction,
+			 12*$clockFraction);
 
 
-.test{
-	color: $keyframes;
-}
 
-
-/*
-Below are the 4 different animation
-classes that use different keyframes
-depending on the positions
-*/
-
-@each $animation in $animations{
-	.animatePos#{nth($animation,1)}{
+//Loop and create all 12 position css classes
+@for $i from 1 through 12{
+	.animatePos#{$i}{
 		position: absolute;
 
 		/* animation prefixes for all browsers */
-		-webkit-animation:pos#{nth($animation,1)} 4s linear infinite;
-	   -moz-animation:pos#{nth($animation,1)} 4s linear infinite;
-	    -ms-animation:pos#{nth($animation,1)} 4s linear infinite;
-	     -o-animation:pos#{nth($animation,1)} 4s linear infinite;
-	        animation:pos#{nth($animation,1)} 4s linear infinite;
+		-webkit-animation:pos#{$i} 4s linear infinite;
+	   -moz-animation:pos#{$i} 4s linear infinite;
+	    -ms-animation:pos#{$i} 4s linear infinite;
+	     -o-animation:pos#{$i} 4s linear infinite;
+	        animation:pos#{$i} 4s linear infinite;
 	}
 
 }
 
 
+/* Below are the different keyframe animations
+for the different 12 positions of a clock */
 @-webkit-keyframes pos0{
-	  #{nth($keyframes,1)} {
+	#{nth($keyframes,1)} {
 	    top: 50%;
 	    left: 0%;
 	}
@@ -170,6 +168,771 @@ depending on the positions
 	}
 }
 
-/****/
+
+/*** */
+
+@-webkit-keyframes pos2{
+	#{nth($keyframes,12)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,1)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,2)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,3)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,4)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,5)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,6)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,7)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,8)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,9)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,10)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,11)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+  	#{nth($keyframes,13)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+}
+
+/*** */
+
+@-webkit-keyframes pos3{
+	#{nth($keyframes,11)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,12)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,1)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,2)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,3)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,4)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,5)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,6)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,7)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,8)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,9)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,10)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+	#{nth($keyframes,13)} {
+    	top: 0%;
+    	left: 50%;
+	}
+}
+
+/*** */
+
+@-webkit-keyframes pos4{
+	#{nth($keyframes,10)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,11)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,12)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,1)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,2)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,3)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,4)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,5)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,6)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,7)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,8)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,9)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+ 	#{nth($keyframes,13)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+}
+
+/*** */
+
+@-webkit-keyframes pos5{
+	#{nth($keyframes,9)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,10)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,11)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,12)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,1)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,2)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,3)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,4)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,5)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,6)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,7)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,8)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+ 	#{nth($keyframes,13)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+}
+/*** */
+
+@-webkit-keyframes pos6{
+	#{nth($keyframes,8)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,9)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,10)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,11)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,12)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,1)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,2)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,3)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,4)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,5)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,6)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,7)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+  #{nth($keyframes,13)} {
+	    top: 50%;
+	    left: 100%;
+	}
+}
+
+/*** */
+
+@-webkit-keyframes pos7{
+	#{nth($keyframes,7)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,8)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,9)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,10)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,11)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,12)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,1)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,2)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,3)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,4)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,5)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,6)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+ #{nth($keyframes,13)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+}
+
+/*** */
+
+@-webkit-keyframes pos8{
+	#{nth($keyframes,6)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,7)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,8)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,9)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,10)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,11)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,12)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,1)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,2)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,3)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,4)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,5)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+
+  #{nth($keyframes,1)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+}
+
+
+/*** */
+
+@-webkit-keyframes pos9{
+	#{nth($keyframes,5)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,6)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,7)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,8)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,9)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,10)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,11)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,12)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,1)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,2)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,3)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,4)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+  #{nth($keyframes,13)} {
+	    top: 100%;
+	    left: 50%;
+	}
+}
+
+/*** */
+
+@-webkit-keyframes pos10{
+	#{nth($keyframes,4)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,5)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,6)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,7)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,8)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,9)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,10)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,11)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,12)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,1)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,2)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,3)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+  #{nth($keyframes,13)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+}
+
+/*** */
+
+@-webkit-keyframes pos11{
+	#{nth($keyframes,3)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,4)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,5)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,6)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,7)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,8)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,9)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,10)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,11)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,12)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,1)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,2)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+  #{nth($keyframes,13)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+}
+
+
+/*** */
+
+@-webkit-keyframes pos12{
+	#{nth($keyframes,2)} {
+    	top: 33.333333333%;
+    	left: 0%+16.66667;
+    }
+
+  	#{nth($keyframes,3)} {
+	    top: 50%-33.33333;
+	    left: 0%33.33333;
+	}
+
+ #{nth($keyframes,4)} {
+    	top: 0%;
+    	left: 50%;
+	}
+
+ #{nth($keyframes,5)} {
+  		top: 16.66667%;
+	    left: 66.66667%;
+	}
+
+ #{nth($keyframes,6)} {
+	    top: 33.33333%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,7)} {
+	    top: 50%;
+	    left: 100%;
+	}
+
+ #{nth($keyframes,8)} {
+	    top: 66.66667%;
+	    left: 83.33333%;
+	}
+
+  #{nth($keyframes,9)} {
+	    top: 83.33333%;
+	    left: 66.66667%;
+	}
+
+  #{nth($keyframes,10)} {
+	    top: 100%;
+	    left: 50%;
+	}
+
+  #{nth($keyframes,11)} {
+	    top: 83.33333%;
+	    left: 33.33333%;
+	}
+
+  #{nth($keyframes,12)}{
+	    top: 66.66667%;
+	    left: 16.66667%;
+	}
+
+  #{nth($keyframes,1)} {
+	    top: 50%;
+	    left: 0%;
+	}
+
+  #{nth($keyframes,13)} {
+	    top: 50%;
+	    left: 0%;
+	}
+}
+
+
+
+
+
 
 
