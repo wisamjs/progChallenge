@@ -1,21 +1,57 @@
 
 
-.cssAnimate{
+/*
+Below are the 4 different animation
+classes that use different keyframes
+depending on the positions
+*/
+.animatePos0{
 	position: absolute;
-	top: 50%;
-	left:0%;
 
 	/* animation prefixes for all browsers */
-	-webkit-animation:bounce 5s linear infinite;
-   -moz-animation:bounce 5s linear infinite;
-    -ms-animation:bounce 5s linear infinite;
-     -o-animation:bounce 5s linear infinite;
-        animation:bounce 5s linear infinite;
+	-webkit-animation:pos0 4s linear infinite;
+   -moz-animation:pos0 4s linear infinite;
+    -ms-animation:pos0 4s linear infinite;
+     -o-animation:pos0 4s linear infinite;
+        animation:pos0 4s linear infinite;
+}
+
+.animatePos1{
+	-webkit-animation:pos1 4s linear infinite;
+   -moz-animation:pos1 4s linear infinite;
+    -ms-animation:pos1 4s linear infinite;
+    -o-animation:pos1 4s linear infinite;
+        animation:pos1 4s linear infinite;
+}
+
+.animatePos2{
+	-webkit-animation:pos2 4s linear infinite;
+   -moz-animation:pos2 4s linear infinite;
+    -ms-animation:pos2 4s linear infinite;
+    -o-animation:pos2 4s linear infinite;
+    animation:pos2 4s linear infinite;
+}
+
+.animatePos3{
+	-webkit-animation:pos3 4s linear infinite;
+   -moz-animation:pos3 4s linear infinite;
+    -ms-animation:pos3 4s linear infinite;
+    -o-animation:pos3 4s linear infinite;
+    animation:pos3 4s linear infinite;
+}
+
+.animatePos4{
+	-webkit-animation:pos4 4s linear infinite;
+   -moz-animation:pos4 4s linear infinite;
+    -ms-animation:pos4 4s linear infinite;
+    -o-animation:pos4 4s linear infinite;
+    animation:pos4 4s linear infinite;
 }
 
 
+
 /*animation defining position */
-@-webkit-keyframes bounce {
+@-webkit-keyframes pos0 {
 
 	/*mid-left*/
 	0% {
@@ -48,40 +84,139 @@
 
 }
 
-
-/* Trying to dynamically load below css
- with angular*/
-
+/*animation defining position */
+@-webkit-keyframes pos1 {
 
 
-.animate{
-	position: absolute;
-}
-.pos0{
-	top: 50%;
-	left:0%;
+	/*top-center*/
+	0% {
+		top: 0%;
+		left: 50%;
+	}
 
-}
+	/*mid-right*/
+	25% {
+		top: 50%;
+		left:100%;
+	}
 
-.pos1{
-	top: 0%;
-	left:50%;
-	background:blue;
-}
+	/*bottom-center*/
+	50% {
+		top: 100%;
+		left: 50%;
 
-.pos2{
-	top: 50%;
-	left:100%;
-}
+	}
+	/*middle-page*/
+	75% {
+		top: 50%;
+		left:50%;
+	}
+		/*mid-left*/
+	100% {
+		top: 50%;
+		left:0%;
+	}
 
-.pos3{
-	top: 100%;
-	left:50%;
-
-}
-
-.pos4{
-	top: 50%;
-	left: 50%;
 }
 
+/*animation defining position */
+@-webkit-keyframes pos2 {
+
+
+	/*mid-right*/
+	0% {
+		top: 50%;
+		left:100%;
+	}
+
+	/*bottom-center*/
+	25% {
+		top: 100%;
+		left: 50%;
+
+	}
+	/*middle-page*/
+	50% {
+		top: 50%;
+		left:50%;
+	}
+
+		/*mid-left*/
+	75% {
+		top: 50%;
+		left:0%;
+	}
+	/*top-center*/
+	100% {
+		top: 0%;
+		left: 50%;
+	}
+
+}
+/*animation defining position */
+@-webkit-keyframes pos3 {
+
+
+	/*bottom-center*/
+	0% {
+		top: 100%;
+		left: 50%;
+
+	}
+	/*middle-page*/
+	25% {
+		top: 50%;
+		left:50%;
+	}
+
+		/*mid-left*/
+	50% {
+		top: 50%;
+		left:0%;
+	}
+	/*top-center*/
+	75% {
+		top: 0%;
+		left: 50%;
+	}
+		/*mid-right*/
+	100% {
+		top: 50%;
+		left:100%;
+	}
+
+}
+
+/*animation defining position */
+@-webkit-keyframes pos4 {
+
+	/*middle-page*/
+	0% {
+		top: 50%;
+		left:50%;
+	}
+	/*mid-left*/
+	25% {
+		top: 50%;
+		left:0%;
+	}
+	/*top-center*/
+	50% {
+		top: 0%;
+		left: 50%;
+	}
+
+	/*mid-right*/
+	75% {
+		top: 50%;
+		left:100%;
+	}
+
+	/*bottom-center*/
+	100% {
+		top: 100%;
+		left: 50%;
+
+	}
+
+}

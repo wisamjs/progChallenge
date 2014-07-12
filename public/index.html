@@ -9,15 +9,15 @@
 <body>
 
 	<!-- Using Maincontroller I am able to access variable letter -->
-	<div class="animate" ng-controller="MainController" ng-class="'pos{{position}}'">
+	<div class="animatePos0" ng-controller="MainController" ng-class="'animatePos{{ position }}'">
 		<p>{{currString}}</p>
-		<p>{{ position }} </p>
 	</div>
 
 	<!-- vendors -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 	<script src="vendors/angular-local-storage.js"></script>
 	<script src="app.js"></script>
+	<script src="controllers/MainCtrl.js"></script>
 
 </body>
 </html>
