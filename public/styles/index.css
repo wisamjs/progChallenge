@@ -1,3 +1,6 @@
+.test {
+  color: 0%, 8.33333%, 16.66667%, 25%, 33.33333%, 41.66667%, 50%, 58.33333%, 66.66667%, 75%, 83.33333%, 91.66667%, 100%; }
+
 /*
 Below are the 4 different animation
 classes that use different keyframes
@@ -48,137 +51,111 @@ depending on the positions
   -o-animation: pos4 4s linear infinite;
   animation: pos4 4s linear infinite; }
 
-/*animation defining position */
 @-webkit-keyframes pos0 {
-  /*mid-left*/
-  /*top-center*/
-  /*mid-right*/
-  /*bottom-center*/
-  /*middle-page*/
   0% {
     top: 50%;
     left: 0%; }
 
+  8.33333% {
+    top: 33.33333%;
+    left: 16.66667%; }
+
+  16.66667% {
+    top: 50% -33.33333;
+    left: 0% 33.33333; }
+
   25% {
     top: 0%;
     left: 50%; }
+
+  33.33333% {
+    top: 16.66667%;
+    left: 66.66667%; }
+
+  41.66667% {
+    top: 33.33333%;
+    left: 83.33333%; }
 
   50% {
     top: 50%;
     left: 100%; }
 
+  58.33333% {
+    top: 66.66667%;
+    left: 83.33333%; }
+
+  66.66667% {
+    top: 83.33333%;
+    left: 66.66667%; }
+
   75% {
     top: 100%;
     left: 50%; }
 
-  100% {
-    top: 50%;
-    left: 50%; } }
+  83.33333% {
+    top: 83.33333%;
+    left: 33.33333%; }
 
-/*animation defining position */
-@-webkit-keyframes pos1 {
-  /*top-center*/
-  /*mid-right*/
-  /*bottom-center*/
-  /*middle-page*/
-  /*mid-left*/
-  0% {
-    top: 0%;
-    left: 50%; }
-
-  25% {
-    top: 50%;
-    left: 100%; }
-
-  50% {
-    top: 100%;
-    left: 50%; }
-
-  75% {
-    top: 50%;
-    left: 50%; }
+  91.66667% {
+    top: 66.66667%;
+    left: 16.66667%; }
 
   100% {
     top: 50%;
     left: 0%; } }
 
-/*animation defining position */
-@-webkit-keyframes pos2 {
-  /*mid-right*/
-  /*bottom-center*/
-  /*middle-page*/
-  /*mid-left*/
-  /*top-center*/
+/*** */
+@-webkit-keyframes pos1 {
   0% {
+    top: 33.33333%;
+    left: 16.66667%; }
+
+  8.33333% {
+    top: 50% -33.33333;
+    left: 0% 33.33333; }
+
+  16.66667% {
+    top: 0%;
+    left: 50%; }
+
+  25% {
+    top: 16.66667%;
+    left: 66.66667%; }
+
+  33.33333% {
+    top: 33.33333%;
+    left: 83.33333%; }
+
+  41.66667% {
     top: 50%;
     left: 100%; }
 
-  25% {
+  50% {
+    top: 66.66667%;
+    left: 83.33333%; }
+
+  58.33333% {
+    top: 83.33333%;
+    left: 66.66667%; }
+
+  66.66667% {
     top: 100%;
     left: 50%; }
 
-  50% {
-    top: 50%;
-    left: 50%; }
-
   75% {
+    top: 83.33333%;
+    left: 33.33333%; }
+
+  83.33333% {
+    top: 66.66667%;
+    left: 16.66667%; }
+
+  91.66667% {
     top: 50%;
     left: 0%; }
 
   100% {
-    top: 0%;
-    left: 50%; } }
+    top: 33.33333%;
+    left: 16.66667%; } }
 
-/*animation defining position */
-@-webkit-keyframes pos3 {
-  /*bottom-center*/
-  /*middle-page*/
-  /*mid-left*/
-  /*top-center*/
-  /*mid-right*/
-  0% {
-    top: 100%;
-    left: 50%; }
-
-  25% {
-    top: 50%;
-    left: 50%; }
-
-  50% {
-    top: 50%;
-    left: 0%; }
-
-  75% {
-    top: 0%;
-    left: 50%; }
-
-  100% {
-    top: 50%;
-    left: 100%; } }
-
-/*animation defining position */
-@-webkit-keyframes pos4 {
-  /*middle-page*/
-  /*mid-left*/
-  /*top-center*/
-  /*mid-right*/
-  /*bottom-center*/
-  0% {
-    top: 50%;
-    left: 50%; }
-
-  25% {
-    top: 50%;
-    left: 0%; }
-
-  50% {
-    top: 0%;
-    left: 50%; }
-
-  75% {
-    top: 50%;
-    left: 100%; }
-
-  100% {
-    top: 100%;
-    left: 50%; } }
+/****/
