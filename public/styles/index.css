@@ -1,9 +1,7 @@
 
 
-.animate{
+.cssAnimate{
 	position: absolute;
-	width:25px;
-	height:25px;
 	top: 50%;
 	left:0%;
 
@@ -14,6 +12,7 @@
      -o-animation:bounce 5s linear infinite;
         animation:bounce 5s linear infinite;
 }
+
 
 /*animation defining position */
 @-webkit-keyframes bounce {
@@ -49,4 +48,40 @@
 
 }
 
+
+/* Trying to dynamically load below css
+ with angular*/
+
+
+
+.animate{
+	position: absolute;
+}
+.pos0{
+	top: 50%;
+	left:0%;
+
+}
+
+.pos1{
+	top: 0%;
+	left:50%;
+	background:blue;
+}
+
+.pos2{
+	top: 50%;
+	left:100%;
+}
+
+.pos3{
+	top: 100%;
+	left:50%;
+
+}
+
+.pos4{
+	top: 50%;
+	left: 50%;
+}
 

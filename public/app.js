@@ -7,7 +7,11 @@ myApp.controller('MainController',
 
 	function($scope,$timeout,localStorageService, genericServices) {
 	$scope.letter = 'o';
-	$scope.obj = { 'position':0, 'top':'50%','left':'0%'};
+	if (localStorageService.get('position') === null){
+		$scope.position = 0;
+	}else{
+		$scope.position = Number(localStorageService.get('position'));
+	}
 
 	//the current string displayed onscreen
 	$scope.currString = $scope.letter;
@@ -20,8 +24,25 @@ myApp.controller('MainController',
     }
 
 
+    $scope.updatePosition = function(){
+
+    	if ($scope.position === 4){
+
+    		$scope.position = 0;
+    	}else{
+
+    		$scope.position += 1;
+    	}
+    		//update value to local storage
+    		localStorageService.set('position',$scope.position);
+
+	$timeout($scope.updatePosition,1000);
+}
+
+
     //call timeout function
     var mytimeout = $timeout($scope.addLetter,5000);
+    var mytimeout = $timeout($scope.updatePosition,1000);
 }]);
 
 angular.module('myModule', ['LocalStorageModule'])
